@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myModule"> <!-- ng-app is a directive -->
+<head>
+<meta charset="ISO-8859-1">
+<title>ex2.html</title>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+</head>
+<body class="container">
+	<h2 ng-controller="myController">
+		<div>First Name: {{employee.firstName}}</div>
+		<!-- Here employee is a complex object and firstName, lastName and gender are properties -->
+		<div>Last Name: {{employee.lastName}}</div>
+		<div>Gender: {{employee.gender}}</div>
+	</h2>
+	<a href="index.html">Home Page</a>	
+<script src="js/angular.js"></script>
+<script src="js/sc2.js"></script>
+</body>
+</html>

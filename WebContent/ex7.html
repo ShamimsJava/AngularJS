@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+<meta charset="ISO-8859-1">
+<title>ex7.html</title>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+<script src="js/angular.js"></script>
+<script src="js/sc7.js"></script>
+</head>
+<body class="container">
+	<div ng-controller="myController">
+	<h2>Working with like and dislike button</h2><hr/>
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Likes</th>
+					<th>Dislikes</th>
+					<th>Likes/Dislikes</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr ng-repeat="technology in technologies">
+					<td>{{technology.name}}</td>
+					<td>{{technology.likes}}</td>
+					<td>{{technology.dislikes}}</td>
+					<td>
+						<input type="button" value="Likes" ng-click="incrementLikes(technology)" class="btn btn-primary"/>
+						<input type="button" value="Dislikes" ng-click="incrementDislikes(technology)" class="btn btn-primary"/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div><hr/>
+	<a href="index.html">Home Page</a>
+</body>
+</html>

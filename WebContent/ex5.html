@@ -2,13 +2,15 @@
 <html ng-app="myModule">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>ex5.html</title>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
 <script src="js/angular.js"></script>
 <script src="js/sc5.js"></script>
 </head>
-<body>
+<body class="container">
+	<h2>Working with two way binding</h2><hr/>
 	<div ng-controller="myController">
-		<table>
+		<table class="table table-bordered table-hover table-striped">
 			<tr>
 				<td>Fisrt Name</td>
 				<td><input type="text" ng-model="employee.firstName"/></td>
@@ -23,7 +25,8 @@
 			</tr>
 		</table>
 		<br/>
-		<table>
+		<h2>Result of two way binding</h2><hr/>
+		<table class="table table-bordered table-hover table-striped">
 			<tr>
 				<td>First Name</td>
 				<td>{{employee.firstName}}</td>
@@ -37,6 +40,7 @@
 				<td>{{employee.gender}}</td>
 			</tr>
 		</table>
-	</div>
+	</div><hr/>
+	<a href="index.html">Home Page</a>
 </body>
 </html>

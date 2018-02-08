@@ -12,14 +12,4 @@ myApp.controller("myController1", myController1);
 //creating the controller and registering with the module
 myApp.controller("myController2", function($scope) {
 	$scope.message2 = "AngularJS Tutorial 2";
-	
-	//creating a complex object
-	var employee = {
-			firstName: 'Shamim',
-			lastName: 'Sarker',
-			gender: 'Male'
-	};
-	
-	//attaching a complex object to the scope
-	$scope.employee = employee;
 });
