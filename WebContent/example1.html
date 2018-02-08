@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html ng-app="myModule">
+<html ng-app="myModule"> <!-- ng-app is a directive -->
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<script src="js/angular.js"></script>
-<script src="js/script.js"></script>
 </head>
 <body>
-	<h2>10 + 20 = {{10 + 20}}</h2>
+	<h2>10 + 20 = {{10 + 20}}</h2> <!-- {{expression}} is a binding expression -->
 
-	<h2>{{10 == 20}}</h2>
+	<h2>{{10 == 20}}</h2> <!-- Boolean expression -->
 
 	<h2>{{10 == 10}}</h2>
 
-	<h2>{{{name:'Shamim', age:27}.name}}</h2>
+	<h2>{{{name:'Shamim', age:27}.name}}</h2> <!-- we can assign value within property and we can show -->
 
-	<h2>{{['Shamim', 'Parvez', 'Urmi'][2]}}</h2>
+	<h2>{{['Shamim', 'Parvez', 'Urmi'][2]}}</h2> <!-- We can create an array and show value -->
 
-	<h2 ng-controller="myController1">{{message1}}</h2>
+	<h2 ng-controller="myController1">{{message1}}</h2> <!-- ng-controller is a directive and message1 is a variable -->
 
 	<h2 ng-controller="myController2">
 		{{message2}}
 	</h2>
 	
 	<h2 ng-controller="myController2">
-		<div>First Name: {{employee.firstName}}</div>
+		<div>First Name: {{employee.firstName}}</div> <!-- Here employee is a complex object and firstName, lastName and gender are properties -->
 		<div>Last Name: {{employee.lastName}}</div>
 		<div>Gender: {{employee.gender}}</div>
 	</h2>
+	
+<script src="js/angular.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

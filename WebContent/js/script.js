@@ -1,10 +1,8 @@
-///<reference path="angular.js"/>
-
 //create a module. here [] is dependency
 var myApp = angular.module("myModule", []);
 
-//create the controller. here scope is angular object
-var myController1 = function($scope) {
+//create the controller. here scope is an angular object
+var myController1 = function($scope) { //anonymous function
 	$scope.message1 = "AngularJS Tutorial 1";
 }
 
@@ -25,5 +23,3 @@ myApp.controller("myController2", function($scope) {
 	//attaching a complex object to the scope
 	$scope.employee = employee;
 });
-
-//module, controller and register in one line
