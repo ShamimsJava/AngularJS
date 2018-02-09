@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+<meta charset="ISO-8859-1">
+<title>ex14.html</title>
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<script src="js/angular.js"></script>
+<script src="js/sc14.js"></script>
+</head>
+<body class="container">
+	<div ng-controller="myController">
+		<h2>Working with ng-hide directive</h2>
+		<hr />
+		<input type="checkbox" ng-model="hideSalary"/> Hide Salary <br/><br/>
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Gender</th>
+					<th>City</th>
+					<th ng-hide="hideSalary">Salary</th>
+					<th ng-show="hideSalary">Salary</th>
+					<!-- <th ng-show="!hideSalary">Salary</th> -->
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="employee in employees">
+					<td>{{employee.name}}</td>
+					<td>{{employee.gender}}</td>
+					<td>{{employee.city}}</td>
+					<td ng-hide="hideSalary">{{employee.salary}}</td>
+					<td ng-show="hideSalary">####</td>
+					<!-- <td ng-show="!hideSalary">{{employee.salary}}</td> -->
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+		
+		
+		<h2>Working with ng-show directive</h2>
+		<hr />
+		<input type="checkbox" ng-model="showAll"/> Show All<br /><br />
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Number</th>
+					<th ng-show="showAll">Gender</th>
+					<th ng-show="showAll">City</th>
+					<th ng-show="showAll">Country</th>
+					<th ng-show="showAll">Salary</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr ng-repeat="person in persons">
+					<td>{{person.name}}</td>
+					<td>{{person.number}}</td>
+					<td ng-show="showAll">{{person.gender}}</td>
+					<td ng-show="showAll">{{person.city}}</td>
+					<td ng-show="showAll">{{person.country}}</td>
+					<td ng-show="showAll">{{person.salary}}</td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+	<hr />
+	<a href="index.html">Home Page</a>
+</body>
+</html>
